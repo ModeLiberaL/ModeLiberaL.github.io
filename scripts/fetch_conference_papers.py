@@ -67,10 +67,12 @@ def build_icml() -> dict:
     payload = get_json(
         "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json"
     )
+    all_items = payload["results"]
+    items_by_id = {item.get("id"): item for item in all_items}
     records = []
-    for item in payload["results"]:
+    for item in all_items:
         decision = str(item.get("decision") or "")
-        if not decision.startswith("Accept"):
+        if item.get("eventtype") != "Poster" or not decision.startswith("Accept"):
             continue
 
         topic = item.get("topic") or "Other"
@@ -83,6 +85,13 @@ def build_icml() -> dict:
         ]
         paper_url = item.get("paper_url") or ""
         virtual_url = item.get("virtualsite_url") or ""
+        event_type = "Poster"
+        for related_id in item.get("related_events_ids", []):
+            related = items_by_id.get(related_id)
+            if related and related.get("eventtype") == "Oral":
+                event_type = "Oral"
+                virtual_url = related.get("virtualsite_url") or virtual_url
+                break
         if virtual_url.startswith("/"):
             virtual_url = f"https://icml.cc{virtual_url}"
 
@@ -99,7 +108,7 @@ def build_icml() -> dict:
                     if "regular" in decision.lower()
                     else "Poster"
                 ),
-                "e": item.get("eventtype") or "Poster",
+                "e": event_type,
                 "k": clean_keywords(item.get("keywords")),
                 "u": paper_url,
                 "v": virtual_url,
