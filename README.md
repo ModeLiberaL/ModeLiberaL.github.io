@@ -1,32 +1,13 @@
 # ModeLiberaL.github.io
 
-This is a static personal homepage that can be published directly with GitHub Pages.
+ModeLiberaL 的个人主页与 2026 AI 顶会中文导航。
 
-## Files
+## 页面
 
-- Home page: `index.html`
-- Styles: `styles.css`
-- Profile image: `assets/profile.jpg`
+- `index.html`：个人主页与会议导航入口
+- `neurips-2026.html`：NeurIPS 2026 时间线、赛道、主题和官方资源
+- `acl-2026.html`：ACL 2026 论文入口、日程、主题、教程与 Workshop
+- `styles.css`：全站响应式样式
+- `script.js`：移动端导航、站内搜索与目录高亮
 
-Replace the remaining introduction and project text in `index.html` as needed.
-
-## Publish
-
-1. Add the SSH public key to GitHub: `Settings -> SSH and GPG keys -> New SSH key`
-2. Create a repository named `ModeLiberaL.github.io`
-3. Set the remote repository:
-
-   ```powershell
-   git remote add origin git@github.com:ModeLiberaL/ModeLiberaL.github.io.git
-   ```
-
-4. Commit and push:
-
-   ```powershell
-   git add .
-   git commit -m "Create personal homepage"
-   git branch -M main
-   git push -u origin main
-   ```
-
-After publishing, visit `https://ModeLiberaL.github.io`.
+会议事实信息来自会议官方页面，并在页面中标注更新日期。本站不复用参考导航站的外部跳转链接。

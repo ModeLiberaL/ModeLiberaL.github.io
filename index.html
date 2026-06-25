@@ -3,54 +3,186 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ModeLiberaL personal homepage">
-    <title>ModeLiberaL</title>
+    <meta name="description" content="ModeLiberaL 的个人主页与 2026 AI 顶会中文导航">
+    <meta name="theme-color" content="#173d63">
+    <title>ModeLiberaL · 研究导航</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
-  <body>
-    <main class="page">
-      <section class="intro" aria-labelledby="site-title">
-        <div class="portrait-wrap">
-          <img class="portrait" src="assets/profile.jpg" alt="&#20010;&#20154;&#22836;&#20687;">
+  <body data-page="home">
+    <button class="mobile-menu" type="button" aria-controls="sidebar" aria-expanded="false">
+      <span aria-hidden="true">☰</span>
+      <span>导航</span>
+    </button>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="站点导航">
+        <div class="sidebar-head">
+          <a class="brand" href="index.html">
+            <img src="assets/profile.jpg" alt="">
+            <span>
+              <strong>ModeLiberaL</strong>
+              <small>Research Atlas</small>
+            </span>
+          </a>
+          <button class="sidebar-close" type="button" aria-label="关闭导航">×</button>
         </div>
 
-        <div class="intro-copy">
-          <p class="eyebrow">Personal Homepage</p>
-          <h1 id="site-title">ModeLiberaL</h1>
-          <p class="lead">
-            &#36825;&#37324;&#26159;&#25105;&#30340; GitHub Pages &#20010;&#20154;&#20027;&#39029;&#12290;&#25105;&#20250;&#22312;&#36825;&#37324;&#25972;&#29702;&#39033;&#30446;&#12289;&#20316;&#21697;&#12289;&#23398;&#20064;&#35760;&#24405;&#21644;&#32852;&#31995;&#26041;&#24335;&#12290;
-          </p>
+        <div class="sidebar-title">
+          <p class="kicker">2026 AI Conference Guides</p>
+          <h1>个人主页 · 中文研究导航</h1>
+          <p>从个人信息到会议日程、研究方向与官方资源，一处快速抵达。</p>
+        </div>
 
-          <div class="actions" aria-label="&#20027;&#39029;&#38142;&#25509;">
-            <a href="https://github.com/ModeLiberaL" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="mailto:2609827233@qq.com">Email</a>
+        <nav class="guide-switcher" aria-label="页面切换">
+          <a class="is-active" href="index.html">
+            <span>个人主页</span>
+            <small>Home</small>
+          </a>
+          <a href="neurips-2026.html">
+            <span>NeurIPS 2026</span>
+            <small>评审中</small>
+          </a>
+          <a href="acl-2026.html">
+            <span>ACL 2026</span>
+            <small>论文已公开</small>
+          </a>
+        </nav>
+
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">搜索本站内容</span>
+          <input type="search" data-guide-search placeholder="搜索会议、主题或资源…">
+        </label>
+
+        <div class="sidebar-stats" aria-label="站点统计">
+          <div>
+            <strong>2</strong>
+            <span>会议导航</span>
+          </div>
+          <div>
+            <strong>55+</strong>
+            <span>研究主题</span>
           </div>
         </div>
-      </section>
 
-      <section class="content-grid" aria-label="&#20010;&#20154;&#20449;&#24687;">
-        <article>
-          <h2>&#20851;&#20110;&#25105;</h2>
-          <p>
-            &#22312;&#36825;&#37324;&#20889;&#19968;&#27573;&#31616;&#30701;&#20171;&#32461;&#65292;&#20363;&#22914;&#20320;&#30340;&#23398;&#26657;&#12289;&#19987;&#19994;&#12289;&#30740;&#31350;&#20852;&#36259;&#12289;&#25216;&#26415;&#26041;&#21521;&#25110;&#24403;&#21069;&#27491;&#22312;&#20570;&#30340;&#20107;&#24773;&#12290;
-          </p>
-        </article>
+        <div class="directory">
+          <p class="directory-label">目录浏览</p>
+          <details open>
+            <summary>主页</summary>
+            <a href="#welcome">欢迎</a>
+            <a href="#guides">会议导航</a>
+            <a href="#about">关于我</a>
+          </details>
+          <details>
+            <summary>NeurIPS 2026</summary>
+            <a href="neurips-2026.html#status">当前状态</a>
+            <a href="neurips-2026.html#timeline">关键日期</a>
+            <a href="neurips-2026.html#topics">研究方向</a>
+          </details>
+          <details>
+            <summary>ACL 2026</summary>
+            <a href="acl-2026.html#papers">论文索引</a>
+            <a href="acl-2026.html#program">大会日程</a>
+            <a href="acl-2026.html#topics">研究方向</a>
+          </details>
+        </div>
 
-        <article>
-          <h2>&#39033;&#30446;</h2>
-          <ul>
-            <li><strong>&#39033;&#30446;&#19968;&#65306;</strong>&#29992;&#19968;&#21477;&#35805;&#35828;&#26126;&#39033;&#30446;&#20570;&#20102;&#20160;&#20040;&#65292;&#20197;&#21450;&#20320;&#30340;&#36129;&#29486;&#12290;</li>
-            <li><strong>&#39033;&#30446;&#20108;&#65306;</strong>&#21487;&#20197;&#38142;&#25509;&#21040; GitHub &#20179;&#24211;&#12289;&#35770;&#25991;&#12289;&#28436;&#31034;&#25110;&#20316;&#21697;&#12290;</li>
-          </ul>
-        </article>
+        <p class="sidebar-note">
+          内容仅整理自会议官方页面，不复用参考站的跳转链接。<br>
+          更新日期：2026-06-25
+        </p>
+      </aside>
 
-        <article>
-          <h2>&#32852;&#31995;</h2>
-          <p>
-            Email: <a href="mailto:2609827233@qq.com">2609827233@qq.com</a>
-          </p>
-        </article>
-      </section>
-    </main>
+      <main class="main" data-search-root>
+        <section class="home-hero" id="welcome" data-search-card data-search="ModeLiberaL 个人主页 GitHub 研究导航">
+          <div class="home-portrait">
+            <img src="assets/profile.jpg" alt="ModeLiberaL 的个人头像">
+          </div>
+          <div class="home-copy">
+            <p class="eyebrow">Personal Homepage · Research Guide</p>
+            <h2>你好，我是 <span>ModeLiberaL</span></h2>
+            <p class="hero-lead">
+              这里是我的个人主页，也是一个持续更新的中文研究导航。
+              我会把重要 AI 顶会的时间线、研究方向、论文入口和参会资源整理成更容易浏览的结构。
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#guides">浏览会议导航</a>
+              <a class="button secondary" href="https://github.com/ModeLiberaL" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="text-link" href="mailto:2609827233@qq.com">2609827233@qq.com</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block" id="guides">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Conference Library</p>
+              <h2>2026 会议中文导航</h2>
+            </div>
+            <p>每个页面都提供侧栏目录、关键词搜索、时间线和官方资源入口。</p>
+          </div>
+
+          <div class="conference-grid">
+            <article class="conference-card neurips-card" data-search-card data-search="NeurIPS 2026 神经信息处理系统 悉尼 机器学习 深度学习 强化学习">
+              <div class="card-topline">
+                <span class="status review">评审中</span>
+                <span>2026.12.06–12</span>
+              </div>
+              <p class="card-index">01 / MACHINE LEARNING</p>
+              <h3>NeurIPS 2026 中文导航</h3>
+              <p>悉尼主会场，另设亚特兰大与巴黎卫星会场。当前收录投稿节点、会议结构、21 个官方研究主题和权威入口。</p>
+              <dl class="mini-facts">
+                <div><dt>主会场</dt><dd>悉尼</dd></div>
+                <div><dt>通知</dt><dd>9 月 24 日</dd></div>
+                <div><dt>主题</dt><dd>21 个</dd></div>
+              </dl>
+              <a class="card-link" href="neurips-2026.html">进入导航 <span>→</span></a>
+            </article>
+
+            <article class="conference-card acl-card" data-search-card data-search="ACL 2026 计算语言学 自然语言处理 圣迭戈 论文 Findings LLM">
+              <div class="card-topline">
+                <span class="status live">论文已公开</span>
+                <span>2026.07.02–07</span>
+              </div>
+              <p class="card-index">02 / NATURAL LANGUAGE PROCESSING</p>
+              <h3>ACL 2026 中文导航</h3>
+              <p>圣迭戈举行的第 64 届 ACL。已整理主会、Findings、Industry、Demo、SRW 论文入口，以及教程、Workshop 与日程。</p>
+              <dl class="mini-facts">
+                <div><dt>主会论文</dt><dd>2,306</dd></div>
+                <div><dt>Findings</dt><dd>2,165</dd></div>
+                <div><dt>专题</dt><dd>可解释性</dd></div>
+              </dl>
+              <a class="card-link" href="acl-2026.html">进入导航 <span>→</span></a>
+            </article>
+          </div>
+          <p class="empty-state" data-search-empty hidden>没有找到匹配内容，请换一个关键词。</p>
+        </section>
+
+        <section class="section-block about-grid" id="about">
+          <article data-search-card data-search="关于我 研究兴趣 项目 学习记录">
+            <p class="eyebrow">About</p>
+            <h2>关于我</h2>
+            <p>这个主页正在逐步完善。我关注 AI、机器学习与自然语言处理，也会在这里沉淀项目、论文阅读和会议资料。</p>
+          </article>
+          <article data-search-card data-search="内容原则 官方来源 中文索引 更新">
+            <p class="eyebrow">Editorial Rule</p>
+            <h2>整理原则</h2>
+            <p>时间、地点、投稿节点与论文入口优先引用官方来源；尚未公布的信息会明确标注，不用推测填补空白。</p>
+          </article>
+          <article data-search-card data-search="联系 Email GitHub">
+            <p class="eyebrow">Contact</p>
+            <h2>联系</h2>
+            <p><a href="mailto:2609827233@qq.com">2609827233@qq.com</a><br><a href="https://github.com/ModeLiberaL" target="_blank" rel="noreferrer">github.com/ModeLiberaL</a></p>
+          </article>
+        </section>
+
+        <footer class="site-footer">
+          <span>ModeLiberaL Research Atlas</span>
+          <span>Last updated · 2026-06-25</span>
+        </footer>
+      </main>
+    </div>
+    <div class="sidebar-backdrop" hidden></div>
   </body>
 </html>
