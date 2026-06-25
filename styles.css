@@ -485,6 +485,14 @@ img {
   background: var(--coral);
 }
 
+.conference-card.icml-card::before {
+  background: var(--green);
+}
+
+.conference-card.iclr-card::before {
+  background: var(--violet);
+}
+
 .card-topline {
   display: flex;
   align-items: center;
@@ -510,6 +518,11 @@ img {
 .status.live {
   background: var(--green-soft);
   color: var(--green);
+}
+
+.status.archive {
+  background: var(--blue-soft);
+  color: var(--navy);
 }
 
 .card-index {
@@ -763,6 +776,12 @@ img {
   color: var(--blue);
   font-size: 0.82rem;
   font-weight: 800;
+}
+
+.topic-card .topic-number {
+  width: auto;
+  min-width: 34px;
+  padding: 0 8px;
 }
 
 .topic-grid {
