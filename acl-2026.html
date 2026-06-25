@@ -6,8 +6,8 @@
     <meta name="description" content="ACL 2026 中文导航：论文入口、会议日程、研究方向、教程与 Workshop">
     <meta name="theme-color" content="#173d63">
     <title>ACL 2026 中文导航 · ModeLiberaL</title>
-    <link rel="stylesheet" href="styles.css?v=20260625-2">
-    <script src="script.js?v=20260625-3" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260626-1">
+    <script src="script.js?v=20260626-2" defer></script>
   </head>
   <body data-page="acl">
     <button class="mobile-menu" type="button" aria-controls="sidebar" aria-expanded="false"><span aria-hidden="true">☰</span><span>导航</span></button>
@@ -26,13 +26,14 @@
           <a href="index.html"><span>个人主页</span><small>Home</small></a>
           <a href="neurips-2026.html"><span>NeurIPS 2026</span><small>评审中</small></a>
           <a class="is-active" href="acl-2026.html"><span>ACL 2026</span><small>论文已公开</small></a>
+          <a href="aaai-2026.html"><span>AAAI 2026</span><small>论文已公开</small></a>
           <a href="icml-2026.html"><span>ICML 2026</span><small>论文已公开</small></a>
           <a href="iclr-2026.html"><span>ICLR 2026</span><small>会议已结束</small></a>
         </nav>
         <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜索 ACL 导航</span><input type="search" data-guide-search placeholder="搜索论文集、日程或主题…"></label>
         <div class="sidebar-stats">
-          <div><strong>4,861</strong><span>7 类唯一论文</span></div>
-          <div><strong>34</strong><span>官方研究主题</span></div>
+          <div><strong>4,861</strong><span>唯一论文</span></div>
+          <div><strong>9</strong><span>内容主题</span></div>
         </div>
         <div class="directory">
           <p class="directory-label">目录浏览</p>
@@ -54,7 +55,7 @@
             <a href="#resources">官方资源</a>
           </details>
         </div>
-        <p class="sidebar-note">官方页面共 4,871 条记录；目录移除 10 条完全重复记录。<br>更新日期：2026-06-25</p>
+        <p class="sidebar-note">官方页面共 4,871 条记录；目录移除 10 条完全重复记录，并按标题内容归入 9 个研究主题。<br>更新日期：2026-06-26</p>
       </aside>
 
       <main class="main" data-search-root>
@@ -108,10 +109,10 @@
           </div>
         </section>
 
-        <section class="content-section" id="paper-browser" data-paper-browser data-source="data/acl-2026-papers.json?v=20260625-6" data-group-label="全部论文类别" data-type-label="全部类别简称">
+        <section class="content-section" id="paper-browser" data-paper-browser data-source="data/acl-2026-papers.json?v=20260626-1" data-group-label="全部研究主题" data-type-label="全部论文来源">
           <p class="eyebrow">Full Paper Directory</p>
           <h2>ACL 2026 全量论文目录</h2>
-          <p class="section-intro">收录官方已公布的 Main、Findings、Industry、Demo、CL、TACL 与 SRW。官方页面共有 4,871 条记录，移除 10 条标题与作者完全相同的重复项后，目录包含 4,861 篇唯一论文；可搜索标题和作者，或按类别筛选。</p>
+          <p class="section-intro">收录官方已公布的 Main、Findings、Industry、Demo、CL、TACL 与 SRW。官方页面共有 4,871 条记录，移除 10 条标题与作者完全相同的重复项后，目录包含 4,861 篇唯一论文；现在按论文标题内容归入 9 个研究主题，同时保留官方来源筛选。</p>
           <div class="paper-browser-panel">
             <div class="catalog-toolbar">
               <label class="catalog-control">
@@ -119,11 +120,11 @@
                 <input type="search" data-paper-query placeholder="例如：reasoning、multilingual、Yejin Choi">
               </label>
               <label class="catalog-control">
-                <span>论文类别</span>
+                <span>研究主题</span>
                 <select data-paper-group></select>
               </label>
               <label class="catalog-control">
-                <span>类别简称</span>
+                <span>论文来源</span>
                 <select data-paper-type></select>
               </label>
             </div>
@@ -152,17 +153,18 @@
 
         <section class="content-section" id="topics">
           <p class="eyebrow">Research Map</p>
-          <h2>34 个官方主题 · 中文聚类</h2>
-          <p class="section-intro">官方 CfP 列出 34 个研究主题。为便于导航，这里整理为 8 个主题簇，保留高频方向与 ACL 2026 特别主题。</p>
+          <h2>9 个内容主题 · 全量论文归类</h2>
+          <p class="section-intro">分类使用论文标题中的研究对象、任务和方法关键词生成，保留官方 Main、Findings、Industry、Demo、CL、TACL 与 SRW 来源作为二级筛选。</p>
           <div class="topic-grid">
-            <article class="topic-card" data-search-card data-search="语言模型 LLM agents efficiency code models RAG"><span class="topic-number">01</span><h3>LLM、Agent 与效率</h3><ul><li>Language Models / AI & LLM Agents</li><li>LLM Efficiency / Code Models</li><li>Retrieval-Augmented Language Models</li></ul></article>
-            <article class="topic-card" data-search-card data-search="可解释性 interpretability explainability reasoning 逻辑"><span class="topic-number">02</span><h3>可解释性与推理</h3><ul><li>特别主题：Explainability of NLP Models</li><li>Interpretability and Model Analysis</li><li>Discourse, Pragmatics and Reasoning</li><li>Mathematical / Symbolic / Logical Reasoning</li></ul></article>
-            <article class="topic-card" data-search-card data-search="生成 对话 问答 摘要 信息抽取 检索"><span class="topic-number">03</span><h3>理解、检索与生成</h3><ul><li>Information Extraction and Retrieval</li><li>Natural Language Generation / Summarization</li><li>Dialogue / Question Answering</li><li>Semantics and Textual Inference</li></ul></article>
-            <article class="topic-card" data-search-card data-search="多语言 低资源 翻译 morphology syntax parsing"><span class="topic-number">04</span><h3>语言多样性与结构</h3><ul><li>Multilinguality and Language Diversity</li><li>Low-resource Methods / Machine Translation</li><li>Syntax, Parsing, Morphology and Phonology</li></ul></article>
-            <article class="topic-card" data-search-card data-search="多模态 视觉 机器人 语音 spoken language"><span class="topic-number">05</span><h3>多模态与语音</h3><ul><li>Multimodality and Language Grounding</li><li>Vision, Robotics and Beyond</li><li>Speech Processing and Spoken Language Understanding</li></ul></article>
-            <article class="topic-card" data-search-card data-search="安全 对齐 偏见 公平 伦理 human AI"><span class="topic-number">06</span><h3>可信与人本 NLP</h3><ul><li>Safety and Alignment in LLMs</li><li>Ethics, Bias, and Fairness</li><li>Human-AI Interaction and Cooperation</li></ul></article>
-            <article class="topic-card" data-search-card data-search="临床 生物 金融 社会科学 NLP applications"><span class="topic-number">07</span><h3>领域应用</h3><ul><li>Clinical and Biomedical Applications</li><li>Financial Applications and Time Series</li><li>Computational Social Science / NLP for Social Good</li><li>General NLP Applications</li></ul></article>
-            <article class="topic-card" data-search-card data-search="资源 评测 数据集 认知 语言学 迁移 泛化"><span class="topic-number">08</span><h3>资源、评测与语言科学</h3><ul><li>Resources and Evaluation</li><li>Generalizability and Transfer</li><li>Linguistic Theories / Cognitive Modeling</li><li>Machine Learning for NLP</li></ul></article>
+            <article class="topic-card" data-search-card data-search="推理 可解释性 评测 benchmark hallucination reasoning 1542"><span class="topic-number">1,542</span><h3>推理、可解释性与评测</h3><ul><li>Reasoning、CoT、数学与符号推理</li><li>Explainability、probing、faithfulness</li><li>Benchmark、evaluation 与 factuality</li></ul></article>
+            <article class="topic-card" data-search-card data-search="LLM Agent 基础模型 prompt instruction RAG 958"><span class="topic-number">958</span><h3>LLM、Agent 与基础模型</h3><ul><li>大语言模型、基础模型与后训练</li><li>Prompt、instruction、in-context learning</li><li>Agent、tool use 与长上下文</li></ul></article>
+            <article class="topic-card" data-search-card data-search="领域应用 其他 NLP 713"><span class="topic-number">713</span><h3>领域应用与其他 NLP</h3><ul><li>教育、医疗、金融、社会科学等应用</li><li>跨领域 NLP 系统</li><li>未被高置信关键词覆盖的论文</li></ul></article>
+            <article class="topic-card" data-search-card data-search="安全 公平 隐私 偏见 可信 社会影响 510"><span class="topic-number">510</span><h3>可信、安全与社会影响</h3><ul><li>Safety、privacy、fairness、bias</li><li>Jailbreak、watermark、guardrail</li><li>伦理、治理与 misinformation</li></ul></article>
+            <article class="topic-card" data-search-card data-search="多模态 语音 视觉 grounding robot 410"><span class="topic-number">410</span><h3>多模态、语音与具身</h3><ul><li>Vision-language 与 multimodal grounding</li><li>Speech、audio 与 spoken language</li><li>Robot、embodied 与 gesture language</li></ul></article>
+            <article class="topic-card" data-search-card data-search="生成 对话 摘要 generation dialogue summarization 261"><span class="topic-number">261</span><h3>生成、对话与摘要</h3><ul><li>Text generation 与 controlled generation</li><li>Dialogue、conversation 与 chat</li><li>Summarization、caption 与 story generation</li></ul></article>
+            <article class="topic-card" data-search-card data-search="检索 知识 问答 RAG QA knowledge 252"><span class="topic-number">252</span><h3>检索、知识与问答</h3><ul><li>Retrieval、retriever 与 RAG</li><li>Question answering、fact-checking</li><li>Knowledge graph、entity 与 relation</li></ul></article>
+            <article class="topic-card" data-search-card data-search="多语言 翻译 低资源 multilingual translation 131"><span class="topic-number">131</span><h3>多语言、翻译与低资源</h3><ul><li>Multilingual 与 cross-lingual learning</li><li>Machine translation 与 code-switching</li><li>Low-resource、dialect 与 language diversity</li></ul></article>
+            <article class="topic-card" data-search-card data-search="语言结构 信息抽取 资源 syntax parsing corpus 84"><span class="topic-number">84</span><h3>语言结构、信息抽取与资源</h3><ul><li>Syntax、parsing、semantics、discourse</li><li>Information extraction 与 named entity</li><li>Dataset、corpus、annotation 与 resource</li></ul></article>
           </div>
           <p class="empty-state" data-search-empty hidden>没有找到匹配的 ACL 内容。</p>
         </section>
@@ -197,7 +199,7 @@
             <article class="resource-card" data-search-card data-search="Registration 注册 费用"><h3>Registration</h3><p>分阶段注册、线上与线下参会规则。</p><a class="card-link" href="https://2026.aclweb.org/registration/" target="_blank" rel="noreferrer">查看注册</a></article>
           </div>
         </section>
-        <footer class="site-footer"><span>ModeLiberaL Research Atlas</span><span>Official-source summary · 2026-06-25</span></footer>
+        <footer class="site-footer"><span>ModeLiberaL Research Atlas</span><span>Official-source summary · 2026-06-26</span></footer>
       </main>
     </div>
     <div class="sidebar-backdrop" hidden></div>

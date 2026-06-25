@@ -8,6 +8,8 @@
   --coral-soft: #fff0eb;
   --green: #277a62;
   --green-soft: #e8f5f0;
+  --amber: #a56b22;
+  --amber-soft: #fff4df;
   --violet: #6659a8;
   --violet-soft: #efedfa;
   --ink: #17202a;
@@ -483,6 +485,10 @@ img {
 
 .conference-card.acl-card::before {
   background: var(--coral);
+}
+
+.conference-card.aaai-card::before {
+  background: var(--amber);
 }
 
 .conference-card.icml-card::before {

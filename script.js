@@ -169,7 +169,7 @@
     rendered = 0;
     paperCount.textContent = filteredPapers.length.toLocaleString();
     paperStatus.textContent = filteredPapers.length
-      ? `找到 ${filteredPapers.length.toLocaleString()} 篇，按官方分类整理。`
+      ? `找到 ${filteredPapers.length.toLocaleString()} 篇匹配论文。`
       : "没有匹配论文，请调整关键词或筛选条件。";
     renderMorePapers();
   }
