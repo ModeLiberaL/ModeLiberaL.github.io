@@ -45,6 +45,7 @@
           <details open>
             <summary>论文与研究</summary>
             <a href="#papers">论文入口</a>
+            <a href="#paper-browser">全量论文目录</a>
             <a href="#topics">主题分类</a>
           </details>
           <details open>
@@ -102,6 +103,34 @@
             <article class="paper-link-card" data-search-card data-search="Poster 6567 海报"><span class="paper-count">6,567</span><h3>Poster Events</h3><p>官方虚拟站中的 Poster 展示记录。</p><a class="card-link" href="https://icml.cc/virtual/2026/events/poster" target="_blank" rel="noreferrer">查看 Poster</a></article>
             <article class="paper-link-card" data-search-card data-search="Position Papers 立场论文"><span class="paper-count">Track</span><h3>Position Papers</h3><p>与主赛道分开评审、强调明确立场与行动倡议。</p><a class="card-link" href="https://openreview.net/group?id=ICML.cc/2026/Position_Paper_Track" target="_blank" rel="noreferrer">打开独立赛道</a></article>
             <article class="paper-link-card" data-search-card data-search="Visualization 可视化论文地图"><span class="paper-count">Map</span><h3>官方论文可视化</h3><p>使用 ICML 提供的交互式研究版图探索论文。</p><a class="card-link" href="https://icml2026.vizhub.ai/" target="_blank" rel="noreferrer">打开可视化</a></article>
+          </div>
+        </section>
+
+        <section class="content-section" id="paper-browser" data-paper-browser data-source="data/icml-2026-papers.json">
+          <p class="eyebrow">Full Paper Directory</p>
+          <h2>全量论文目录</h2>
+          <p class="section-intro">搜索官方论文标题、作者和关键词，或按一级研究方向、Regular、Spotlight、Oral、Poster 筛选。初次只渲染少量卡片，以保证移动端流畅。</p>
+          <div class="paper-browser-panel">
+            <div class="catalog-toolbar">
+              <label class="catalog-control">
+                <span>标题 / 作者 / 关键词</span>
+                <input type="search" data-paper-query placeholder="例如：reasoning、diffusion、Yoshua Bengio">
+              </label>
+              <label class="catalog-control">
+                <span>研究方向</span>
+                <select data-paper-group></select>
+              </label>
+              <label class="catalog-control">
+                <span>展示类型</span>
+                <select data-paper-type></select>
+              </label>
+            </div>
+            <div class="catalog-summary">
+              <span data-paper-status>正在加载 ICML 官方论文数据…</span>
+              <span><strong data-paper-count>—</strong> 篇匹配</span>
+            </div>
+            <div class="catalog-paper-list" data-paper-list></div>
+            <button class="catalog-more" type="button" data-paper-more hidden>继续加载</button>
           </div>
         </section>
 

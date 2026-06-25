@@ -31,7 +31,7 @@
         </nav>
         <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜索 ICLR 导航</span><input type="search" data-guide-search placeholder="搜索论文类型、主题或资源…"></label>
         <div class="sidebar-stats">
-          <div><strong>5,352</strong><span>录用论文</span></div>
+          <div><strong>5,351</strong><span>当前公开记录</span></div>
           <div><strong>224</strong><span>Oral</span></div>
         </div>
         <div class="directory">
@@ -45,6 +45,7 @@
           <details open>
             <summary>论文与研究</summary>
             <a href="#papers">论文入口</a>
+            <a href="#paper-browser">全量论文目录</a>
             <a href="#topics">主题分类</a>
           </details>
           <details open>
@@ -69,9 +70,9 @@
         </header>
 
         <div class="metrics" aria-label="ICLR 2026 速览">
-          <div class="metric"><strong>5,352</strong><span>官方会议论文</span></div>
+          <div class="metric"><strong>5,351</strong><span>当前公开记录</span></div>
           <div class="metric"><strong>224</strong><span>Oral</span></div>
-          <div class="metric"><strong>5,128</strong><span>Poster（发布统计）</span></div>
+          <div class="metric"><strong>5,127</strong><span>Poster</span></div>
           <div class="metric"><strong>21</strong><span>官方研究方向</span></div>
         </div>
 
@@ -96,12 +97,40 @@
           <h2>论文与展示入口</h2>
           <p class="section-intro">ICLR 采用公开评审。论文页面通常同时包含 PDF、版本、评审、作者回复与讨论，是阅读研究脉络的理想入口。</p>
           <div class="paper-grid">
-            <article class="paper-link-card" data-search-card data-search="全部论文 5352 papers"><span class="paper-count">5,352</span><h3>全部录用论文</h3><p>在 ICLR 官方虚拟站按主题、Session、标题与作者浏览。</p><a class="card-link" href="https://iclr.cc/virtual/2026/papers.html" target="_blank" rel="noreferrer">打开官方论文页</a></article>
+            <article class="paper-link-card" data-search-card data-search="全部论文 5351 papers"><span class="paper-count">5,351</span><h3>当前公开论文</h3><p>在 ICLR 官方虚拟站按主题、Session、标题与作者浏览。</p><a class="card-link" href="https://iclr.cc/virtual/2026/papers.html" target="_blank" rel="noreferrer">打开官方论文页</a></article>
             <article class="paper-link-card" data-search-card data-search="Oral 224 口头报告"><span class="paper-count">224</span><h3>Oral Papers</h3><p>大会精选口头报告论文与对应 Session。</p><a class="card-link" href="https://iclr.cc/virtual/2026/events/oral" target="_blank" rel="noreferrer">查看 Oral</a></article>
-            <article class="paper-link-card" data-search-card data-search="Poster 5128 海报"><span class="paper-count">5,128</span><h3>Poster Papers</h3><p>官方发布统计中的 Poster 论文规模。</p><a class="card-link" href="https://iclr.cc/virtual/2026/papers.html" target="_blank" rel="noreferrer">浏览 Poster</a></article>
+            <article class="paper-link-card" data-search-card data-search="Poster 5127 海报"><span class="paper-count">5,127</span><h3>Poster Papers</h3><p>当前 OpenReview 可检索到的 Poster 论文。</p><a class="card-link" href="https://iclr.cc/virtual/2026/papers.html" target="_blank" rel="noreferrer">浏览 Poster</a></article>
             <article class="paper-link-card" data-search-card data-search="OpenReview reviews rebuttal 评审"><span class="paper-count">Open</span><h3>OpenReview Proceedings</h3><p>阅读论文 PDF、公开评审、回复、讨论与版本变化。</p><a class="card-link" href="https://openreview.net/group?id=ICLR.cc/2026/Conference" target="_blank" rel="noreferrer">打开 OpenReview</a></article>
             <article class="paper-link-card" data-search-card data-search="Awards best paper outstanding"><span class="paper-count">Awards</span><h3>Awards</h3><p>查看 Outstanding Paper、Honorable Mention 等大会奖项。</p><a class="card-link" href="https://iclr.cc/virtual/2026/awards_detail" target="_blank" rel="noreferrer">查看奖项</a></article>
             <article class="paper-link-card" data-search-card data-search="Blog Track 博客 posters"><span class="paper-count">Blog</span><h3>Blog Track Posters</h3><p>面向更广泛读者的研究解读与可视化表达。</p><a class="card-link" href="https://iclr.cc/virtual/2026/events/BlogTrack-2026" target="_blank" rel="noreferrer">浏览 Blog Track</a></article>
+          </div>
+        </section>
+
+        <section class="content-section" id="paper-browser" data-paper-browser data-source="data/iclr-2026-papers.json">
+          <p class="eyebrow">Full Paper Directory</p>
+          <h2>全量论文目录</h2>
+          <p class="section-intro">搜索官方论文标题、作者和关键词，或按 21 个官方 Primary Area、Oral 与 Poster 筛选。点击标题可直接阅读 OpenReview 论文和评审。</p>
+          <div class="paper-browser-panel">
+            <div class="catalog-toolbar">
+              <label class="catalog-control">
+                <span>标题 / 作者 / 关键词</span>
+                <input type="search" data-paper-query placeholder="例如：alignment、graph、Sergey Levine">
+              </label>
+              <label class="catalog-control">
+                <span>研究方向</span>
+                <select data-paper-group></select>
+              </label>
+              <label class="catalog-control">
+                <span>展示类型</span>
+                <select data-paper-type></select>
+              </label>
+            </div>
+            <div class="catalog-summary">
+              <span data-paper-status>正在加载 ICLR 官方论文数据…</span>
+              <span><strong data-paper-count>—</strong> 篇匹配</span>
+            </div>
+            <div class="catalog-paper-list" data-paper-list></div>
+            <button class="catalog-more" type="button" data-paper-more hidden>继续加载</button>
           </div>
         </section>
 
