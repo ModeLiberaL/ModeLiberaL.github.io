@@ -1,4 +1,4 @@
-"""Build compact ICML/ICLR 2026 paper indexes from official sources."""
+"""Build compact ACL/ICML/ICLR 2026 paper indexes from official sources."""
 
 from __future__ import annotations
 
@@ -7,6 +7,8 @@ import time
 from pathlib import Path
 
 import requests
+from bs4 import BeautifulSoup
+from bs4.element import NavigableString
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,6 +50,141 @@ def clean_keywords(values) -> list[str]:
         if text and text not in result:
             result.append(text)
     return result[:8]
+
+
+ACL_SECTIONS = (
+    (
+        "主会论文",
+        "Main Conference",
+        "Main",
+        "https://2026.aclweb.org/program/accepted_papers/",
+    ),
+    (
+        "Findings",
+        "Findings of ACL",
+        "Findings",
+        "https://2026.aclweb.org/program/findings/",
+    ),
+    (
+        "产业论文",
+        "Industry Track",
+        "Industry",
+        "https://2026.aclweb.org/program/industry/",
+    ),
+    (
+        "系统演示",
+        "System Demonstrations",
+        "Demo",
+        "https://2026.aclweb.org/program/demo/",
+    ),
+    (
+        "Computational Linguistics",
+        "Computational Linguistics Papers",
+        "CL",
+        "https://2026.aclweb.org/program/cl_papers/",
+    ),
+    (
+        "TACL",
+        "Transactions of the ACL Papers",
+        "TACL",
+        "https://2026.aclweb.org/program/tacl_papers/",
+    ),
+    (
+        "学生研究工作坊",
+        "Student Research Workshop",
+        "SRW",
+        "https://2026.aclweb.org/program/srw_papers/",
+    ),
+)
+
+
+def build_acl() -> dict:
+    records = []
+    for group, category, section_type, url in ACL_SECTIONS:
+        response = SESSION.get(url, timeout=120)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        section_records = []
+        for item in soup.select("main li, article li, .content li"):
+            paragraph = item.find("p")
+            if not paragraph or not paragraph.find("br"):
+                continue
+            title_parts = []
+            author_parts = []
+            after_break = False
+            for node in paragraph.descendants:
+                if getattr(node, "name", None) == "br":
+                    after_break = True
+                elif isinstance(node, NavigableString):
+                    target = author_parts if after_break else title_parts
+                    target.append(str(node))
+            if (
+                not paragraph.find("strong")
+                and len(title_parts) >= 3
+                and title_parts[0].lstrip().startswith("*")
+                and title_parts[-1].strip() == "*"
+            ):
+                title = (
+                    title_parts[0].strip().lstrip("*")
+                    + "*"
+                    + "".join(title_parts[1:-1])
+                ).strip()
+            else:
+                title = "".join(title_parts).strip().strip("*").strip()
+            author_text = "".join(author_parts).strip().strip("*").strip()
+            if not title or not author_text:
+                continue
+            authors = "、".join(
+                name.strip()
+                for name in author_text.split(",")
+                if name.strip()
+            )
+            section_records.append(
+                {
+                    "t": title,
+                    "a": authors,
+                    "g": group,
+                    "c": category,
+                    "d": section_type,
+                    "e": "",
+                    "k": [],
+                    "u": url,
+                    "v": "",
+                    "l": "官方论文列表 ↗",
+                }
+            )
+        records.extend(section_records)
+        print(f"ACL {section_type}: {len(section_records):,}")
+
+    source_record_count = len(records)
+    seen = set()
+    unique_records = []
+    for paper in records:
+        identity = (paper["d"], paper["t"].casefold(), paper["a"].casefold())
+        if identity in seen:
+            continue
+        seen.add(identity)
+        unique_records.append(paper)
+    records = unique_records
+
+    records.sort(
+        key=lambda paper: (
+            next(
+                index
+                for index, section in enumerate(ACL_SECTIONS)
+                if section[2] == paper["d"]
+            ),
+            paper["t"].casefold(),
+        )
+    )
+    return {
+        "conference": "ACL 2026",
+        "updated": UPDATED,
+        "source": "https://2026.aclweb.org/program/",
+        "source_records": source_record_count,
+        "duplicates_removed": source_record_count - len(records),
+        "papers": records,
+    }
 
 
 ICML_GROUPS = {
@@ -219,5 +356,6 @@ def write_payload(filename: str, payload: dict) -> None:
 
 
 if __name__ == "__main__":
+    write_payload("acl-2026-papers.json", build_acl())
     write_payload("icml-2026-papers.json", build_icml())
     write_payload("iclr-2026-papers.json", build_iclr())

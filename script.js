@@ -122,7 +122,7 @@
     const area = createElement("p", "catalog-area", paper.c || paper.g);
     const actions = createElement("div", "catalog-actions");
     if (paper.u) {
-      const official = createElement("a", "", "论文与评审 ↗");
+      const official = createElement("a", "", paper.l || "论文与评审 ↗");
       official.href = paper.u;
       official.target = "_blank";
       official.rel = "noreferrer";
@@ -169,7 +169,7 @@
     rendered = 0;
     paperCount.textContent = filteredPapers.length.toLocaleString();
     paperStatus.textContent = filteredPapers.length
-      ? `找到 ${filteredPapers.length.toLocaleString()} 篇，按官方研究方向整理。`
+      ? `找到 ${filteredPapers.length.toLocaleString()} 篇，按官方分类整理。`
       : "没有匹配论文，请调整关键词或筛选条件。";
     renderMorePapers();
   }
@@ -206,12 +206,12 @@
       fillSelect(
         groupSelect,
         [...groupCounts.entries()].sort((a, b) => b[1] - a[1]),
-        "全部研究方向"
+        paperBrowser.dataset.groupLabel || "全部研究方向"
       );
       fillSelect(
         typeSelect,
         [...typeCounts.entries()].sort((a, b) => b[1] - a[1]),
-        "全部展示类型"
+        paperBrowser.dataset.typeLabel || "全部展示类型"
       );
       filteredPapers = papers;
       paperStatus.textContent = `已加载 ${papers.length.toLocaleString()} 篇官方论文记录。`;

@@ -12,6 +12,6 @@ ModeLiberaL 的个人主页与 2026 AI 顶会中文导航。
 - `styles.css`：全站响应式样式
 - `script.js`：移动端导航、站内搜索与目录高亮
 - `data/`：由官方会议数据生成的精简论文索引
-- `scripts/fetch_conference_papers.py`：刷新 ICML/ICLR 论文索引
+- `scripts/fetch_conference_papers.py`：刷新 ACL/ICML/ICLR 论文索引
 
 会议事实信息来自会议官方页面，并在页面中标注更新日期。本站不复用参考导航站的外部跳转链接。
