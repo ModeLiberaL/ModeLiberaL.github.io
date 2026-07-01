@@ -1,6 +1,6 @@
-# ModeLiberaL.github.io
+# Jinyuan Zhang · Personal Homepage
 
-ModeLiberaL 的个人主页与 2026 AI 顶会中文导航。
+Jinyuan Zhang 的双语个人主页与学习笔记。默认语言为英文，会议资料整理收录在独立的 Study Notes 页面中。
 
 ## 页面
 

@@ -22,6 +22,40 @@
     if (event.key === "Escape") setNavigation(false);
   });
 
+  const languageButtons = [...document.querySelectorAll("[data-language]")];
+
+  function setLanguage(language, remember = true) {
+    const nextLanguage = language === "zh" ? "zh" : "en";
+    document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en";
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const value = nextLanguage === "zh" ? element.dataset.zh : element.dataset.en;
+      if (value !== undefined) element.textContent = value;
+    });
+
+    document.querySelectorAll("[data-placeholder-en]").forEach((element) => {
+      element.placeholder = nextLanguage === "zh" ? element.dataset.placeholderZh : element.dataset.placeholderEn;
+    });
+
+    languageButtons.forEach((button) => {
+      const active = button.dataset.language === nextLanguage;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+
+    const pageTitle = nextLanguage === "zh" ? body.dataset.titleZh : body.dataset.titleEn;
+    if (pageTitle) document.title = pageTitle;
+    if (remember) localStorage.setItem("site-language", nextLanguage);
+  }
+
+  if (languageButtons.length) {
+    const savedLanguage = localStorage.getItem("site-language");
+    setLanguage(savedLanguage === "zh" ? "zh" : "en", false);
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.language));
+    });
+  }
+
   const search = document.querySelector("[data-guide-search]");
   const root = document.querySelector("[data-search-root]");
   const cards = root ? [...root.querySelectorAll("[data-search-card]")] : [];

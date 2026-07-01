@@ -1,263 +1,141 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ModeLiberaL 的个人主页与 2026 AI 顶会中文导航">
+    <meta name="description" content="Jinyuan Zhang's personal homepage, research interests, and learning notes.">
     <meta name="theme-color" content="#173d63">
-    <title>ModeLiberaL · 研究导航</title>
-    <link rel="stylesheet" href="styles.css?v=20260626-1">
-    <script src="script.js?v=20260626-2" defer></script>
+    <title>Jinyuan Zhang · Personal Homepage</title>
+    <link rel="stylesheet" href="styles.css?v=20260701-1">
+    <script src="script.js?v=20260701-1" defer></script>
   </head>
-  <body data-page="home">
+  <body data-page="home" data-title-en="Jinyuan Zhang · Personal Homepage" data-title-zh="Jinyuan Zhang · 个人主页">
     <button class="mobile-menu" type="button" aria-controls="sidebar" aria-expanded="false">
       <span aria-hidden="true">☰</span>
-      <span>导航</span>
+      <span data-i18n data-en="Menu" data-zh="导航">Menu</span>
     </button>
 
     <div class="shell">
-      <aside class="sidebar" id="sidebar" aria-label="站点导航">
+      <aside class="sidebar" id="sidebar" aria-label="Site navigation">
         <div class="sidebar-head">
           <a class="brand" href="index.html">
             <img src="assets/profile.jpg" alt="">
-            <span>
-              <strong>ModeLiberaL</strong>
-              <small>Research Atlas</small>
-            </span>
+            <span><strong>Jinyuan Zhang</strong><small>Personal Homepage</small></span>
           </a>
-          <button class="sidebar-close" type="button" aria-label="关闭导航">×</button>
+          <button class="sidebar-close" type="button" aria-label="Close navigation">×</button>
         </div>
 
         <div class="sidebar-title">
-          <p class="kicker">2026 AI Conference Guides</p>
-          <h1>个人主页 · 中文研究导航</h1>
-          <p>从个人信息到会议日程、研究方向与官方资源，一处快速抵达。</p>
+          <p class="kicker">Research · Learning · Building</p>
+          <h1 data-i18n data-en="A personal space for ideas in progress." data-zh="记录思考、学习与创造的个人空间。">A personal space for ideas in progress.</h1>
+          <p data-i18n data-en="I collect my research interests, ongoing explorations, and learning notes here." data-zh="这里收录我的研究兴趣、持续探索和学习笔记。">I collect my research interests, ongoing explorations, and learning notes here.</p>
         </div>
 
-        <nav class="guide-switcher" aria-label="页面切换">
+        <nav class="guide-switcher" aria-label="Primary navigation">
           <a class="is-active" href="index.html">
-            <span>个人主页</span>
-            <small>Home</small>
+            <span data-i18n data-en="Home" data-zh="个人主页">Home</span>
+            <small data-i18n data-en="About me" data-zh="关于我">About me</small>
           </a>
-          <a href="neurips-2026.html">
-            <span>NeurIPS 2026</span>
-            <small>评审中</small>
-          </a>
-          <a href="acl-2026.html">
-            <span>ACL 2026</span>
-            <small>论文已公开</small>
-          </a>
-          <a href="aaai-2026.html">
-            <span>AAAI 2026</span>
-            <small>论文已公开</small>
-          </a>
-          <a href="icml-2026.html">
-            <span>ICML 2026</span>
-            <small>论文已公开</small>
-          </a>
-          <a href="iclr-2026.html">
-            <span>ICLR 2026</span>
-            <small>会议已结束</small>
+          <a href="notes.html">
+            <span data-i18n data-en="Study Notes" data-zh="学习笔记">Study Notes</span>
+            <small data-i18n data-en="Conference collections" data-zh="会议资料整理">Conference collections</small>
           </a>
         </nav>
 
-        <label class="search-box">
-          <span aria-hidden="true">⌕</span>
-          <span class="sr-only">搜索本站内容</span>
-          <input type="search" data-guide-search placeholder="搜索会议、主题或资源…">
-        </label>
-
-        <div class="sidebar-stats" aria-label="站点统计">
-          <div>
-            <strong>5</strong>
-            <span>会议导航</span>
-          </div>
-          <div>
-            <strong>100+</strong>
-            <span>研究主题</span>
-          </div>
+        <div class="language-switcher" role="group" aria-label="Language">
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="zh" aria-pressed="false">中文</button>
         </div>
 
         <div class="directory">
-          <p class="directory-label">目录浏览</p>
+          <p class="directory-label" data-i18n data-en="ON THIS PAGE" data-zh="本页目录">ON THIS PAGE</p>
           <details open>
-            <summary>主页</summary>
-            <a href="#welcome">欢迎</a>
-            <a href="#guides">会议导航</a>
-            <a href="#about">关于我</a>
-          </details>
-          <details>
-            <summary>NeurIPS 2026</summary>
-            <a href="neurips-2026.html#status">当前状态</a>
-            <a href="neurips-2026.html#timeline">关键日期</a>
-            <a href="neurips-2026.html#topics">研究方向</a>
-          </details>
-          <details>
-            <summary>ACL 2026</summary>
-            <a href="acl-2026.html#papers">论文索引</a>
-            <a href="acl-2026.html#program">大会日程</a>
-            <a href="acl-2026.html#topics">研究方向</a>
-          </details>
-          <details>
-            <summary>AAAI 2026</summary>
-            <a href="aaai-2026.html#papers">论文索引</a>
-            <a href="aaai-2026.html#paper-browser">全量论文目录</a>
-            <a href="aaai-2026.html#topics">研究方向</a>
-          </details>
-          <details>
-            <summary>ICML 2026</summary>
-            <a href="icml-2026.html#papers">论文索引</a>
-            <a href="icml-2026.html#program">大会日程</a>
-            <a href="icml-2026.html#topics">研究方向</a>
-          </details>
-          <details>
-            <summary>ICLR 2026</summary>
-            <a href="iclr-2026.html#papers">论文索引</a>
-            <a href="iclr-2026.html#program">大会回顾</a>
-            <a href="iclr-2026.html#topics">研究方向</a>
+            <summary data-i18n data-en="Profile" data-zh="个人信息">Profile</summary>
+            <a href="#welcome" data-i18n data-en="Welcome" data-zh="欢迎">Welcome</a>
+            <a href="#about" data-i18n data-en="About" data-zh="关于我">About</a>
+            <a href="#interests" data-i18n data-en="Research interests" data-zh="研究兴趣">Research interests</a>
+            <a href="#contact" data-i18n data-en="Contact" data-zh="联系我">Contact</a>
           </details>
         </div>
 
-        <p class="sidebar-note">
-          内容仅整理自会议官方页面，不复用参考站的跳转链接。<br>
-          更新日期：2026-06-26
-        </p>
+        <p class="sidebar-note" data-i18n data-en="This homepage is a work in progress—much like the ideas it holds." data-zh="这个主页会和这里的想法一样，持续生长与更新。">This homepage is a work in progress—much like the ideas it holds.</p>
       </aside>
 
       <main class="main" data-search-root>
-        <section class="home-hero" id="welcome" data-search-card data-search="ModeLiberaL 个人主页 GitHub 研究导航">
+        <section class="home-hero" id="welcome">
           <div class="home-portrait">
-            <img src="assets/profile.jpg" alt="ModeLiberaL 的个人头像">
+            <img src="assets/profile.jpg" alt="Portrait of Jinyuan Zhang">
           </div>
           <div class="home-copy">
-            <p class="eyebrow">Personal Homepage · Research Guide</p>
-            <h2>你好，我是 <span>ModeLiberaL</span></h2>
-            <p class="hero-lead">
-              这里是我的个人主页，也是一个持续更新的中文研究导航。
-              我会把重要 AI 顶会的时间线、研究方向、论文入口和参会资源整理成更容易浏览的结构。
-            </p>
+            <p class="eyebrow" data-i18n data-en="Personal Homepage" data-zh="个人主页">Personal Homepage</p>
+            <h2>Jinyuan <span>Zhang</span></h2>
+            <p class="hero-lead" data-i18n data-en="I am interested in artificial intelligence, machine learning, and natural language processing. This is where I document what I am learning, the questions I care about, and the projects I am gradually shaping." data-zh="我关注人工智能、机器学习与自然语言处理。这里记录我正在学习的内容、真正关心的问题，以及逐步成形的项目。">I am interested in artificial intelligence, machine learning, and natural language processing. This is where I document what I am learning, the questions I care about, and the projects I am gradually shaping.</p>
             <div class="hero-actions">
-              <a class="button primary" href="#guides">浏览会议导航</a>
-              <a class="button secondary" href="https://github.com/ModeLiberaL" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="text-link" href="mailto:2609827233@qq.com">2609827233@qq.com</a>
+              <a class="button primary" href="#about" data-i18n data-en="About me" data-zh="了解我">About me</a>
+              <a class="button secondary" href="notes.html" data-i18n data-en="Study notes" data-zh="学习笔记">Study notes</a>
+              <a class="text-link" href="https://github.com/ModeLiberaL" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
         </section>
 
-        <section class="section-block" id="guides">
+        <section class="section-block profile-section" id="about">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Conference Library</p>
-              <h2>2026 会议中文导航</h2>
+              <p class="eyebrow" data-i18n data-en="About" data-zh="关于我">About</p>
+              <h2 data-i18n data-en="Curiosity, made concrete." data-zh="让好奇心落到实处。">Curiosity, made concrete.</h2>
             </div>
-            <p>每个页面都提供侧栏目录、关键词搜索、时间线和官方资源入口。</p>
+            <p data-i18n data-en="I enjoy turning scattered information into clear structures, then using those structures to understand a field more deeply." data-zh="我喜欢把分散的信息整理成清晰的结构，再借此更深入地理解一个领域。">I enjoy turning scattered information into clear structures, then using those structures to understand a field more deeply.</p>
           </div>
-
-          <div class="conference-grid">
-            <article class="conference-card neurips-card" data-search-card data-search="NeurIPS 2026 神经信息处理系统 悉尼 机器学习 深度学习 强化学习">
-              <div class="card-topline">
-                <span class="status review">评审中</span>
-                <span>2026.12.06–12</span>
-              </div>
-              <p class="card-index">01 / MACHINE LEARNING</p>
-              <h3>NeurIPS 2026 中文导航</h3>
-              <p>悉尼主会场，另设亚特兰大与巴黎卫星会场。当前收录投稿节点、会议结构、21 个官方研究主题和权威入口。</p>
-              <dl class="mini-facts">
-                <div><dt>主会场</dt><dd>悉尼</dd></div>
-                <div><dt>通知</dt><dd>9 月 24 日</dd></div>
-                <div><dt>主题</dt><dd>21 个</dd></div>
-              </dl>
-              <a class="card-link" href="neurips-2026.html">进入导航 <span>→</span></a>
+          <div class="about-grid">
+            <article>
+              <p class="eyebrow">01 · THINK</p>
+              <h2 data-i18n data-en="Research" data-zh="研究">Research</h2>
+              <p data-i18n data-en="Following questions at the intersection of intelligent systems, learning, and language." data-zh="关注智能系统、机器学习与语言交叉地带的问题。">Following questions at the intersection of intelligent systems, learning, and language.</p>
             </article>
-
-            <article class="conference-card acl-card" data-search-card data-search="ACL 2026 计算语言学 自然语言处理 圣迭戈 论文 Findings LLM">
-              <div class="card-topline">
-                <span class="status live">论文已公开</span>
-                <span>2026.07.02–07</span>
-              </div>
-              <p class="card-index">02 / NATURAL LANGUAGE PROCESSING</p>
-              <h3>ACL 2026 中文导航</h3>
-              <p>圣迭戈举行的第 64 届 ACL。已整理主会、Findings、Industry、Demo、SRW 论文入口，以及教程、Workshop 与日程。</p>
-              <dl class="mini-facts">
-                <div><dt>主会论文</dt><dd>2,306</dd></div>
-                <div><dt>Findings</dt><dd>2,165</dd></div>
-                <div><dt>专题</dt><dd>可解释性</dd></div>
-              </dl>
-              <a class="card-link" href="acl-2026.html">进入导航 <span>→</span></a>
+            <article>
+              <p class="eyebrow">02 · LEARN</p>
+              <h2 data-i18n data-en="Notes" data-zh="笔记">Notes</h2>
+              <p data-i18n data-en="Building searchable collections from papers, conference programs, and official resources." data-zh="将论文、会议议程与官方资源整理成可检索的学习资料。">Building searchable collections from papers, conference programs, and official resources.</p>
             </article>
-
-            <article class="conference-card aaai-card" data-search-card data-search="AAAI 2026 人工智能 新加坡 论文 Main AISI AIA ETA 机器学习 视觉 语言模型">
-              <div class="card-topline">
-                <span class="status live">论文已公开</span>
-                <span>2026.01.20–27</span>
-              </div>
-              <p class="card-index">03 / ARTIFICIAL INTELLIGENCE</p>
-              <h3>AAAI 2026 中文导航</h3>
-              <p>新加坡举行的第 40 届 AAAI。已整理 Main、AISI、AIA 与 ETA 官方 presentation PDF，按 9 个内容主题浏览 5,652 条唯一论文记录。</p>
-              <dl class="mini-facts">
-                <div><dt>论文记录</dt><dd>5,652</dd></div>
-                <div><dt>Oral</dt><dd>1,235</dd></div>
-                <div><dt>地点</dt><dd>新加坡</dd></div>
-              </dl>
-              <a class="card-link" href="aaai-2026.html">进入导航 <span>→</span></a>
-            </article>
-
-            <article class="conference-card icml-card" data-search-card data-search="ICML 2026 国际机器学习大会 首尔 Seoul 论文 Spotlight Oral 深度学习">
-              <div class="card-topline">
-                <span class="status live">论文已公开</span>
-                <span>2026.07.06–11</span>
-              </div>
-              <p class="card-index">04 / MACHINE LEARNING</p>
-              <h3>ICML 2026 中文导航</h3>
-              <p>首尔举行的第 43 届 ICML。已整理 6,567 篇官方论文、Spotlight 与 Oral 展示、会议日程和 9 个研究主题簇。</p>
-              <dl class="mini-facts">
-                <div><dt>录用论文</dt><dd>6,567</dd></div>
-                <div><dt>Spotlight</dt><dd>574</dd></div>
-                <div><dt>地点</dt><dd>首尔</dd></div>
-              </dl>
-              <a class="card-link" href="icml-2026.html">进入导航 <span>→</span></a>
-            </article>
-
-            <article class="conference-card iclr-card" data-search-card data-search="ICLR 2026 国际学习表征大会 里约热内卢 Rio 论文 Oral Poster 表征学习">
-              <div class="card-topline">
-                <span class="status archive">会议已结束</span>
-                <span>2026.04.23–27</span>
-              </div>
-              <p class="card-index">05 / LEARNING REPRESENTATIONS</p>
-              <h3>ICLR 2026 中文导航</h3>
-              <p>里约热内卢举行的第 14 届 ICLR。汇总 5,351 条当前公开记录、224 篇 Oral、21 个官方方向与会后资源。</p>
-              <dl class="mini-facts">
-                <div><dt>公开记录</dt><dd>5,351</dd></div>
-                <div><dt>Oral</dt><dd>224</dd></div>
-                <div><dt>方向</dt><dd>21 个</dd></div>
-              </dl>
-              <a class="card-link" href="iclr-2026.html">进入导航 <span>→</span></a>
+            <article>
+              <p class="eyebrow">03 · BUILD</p>
+              <h2 data-i18n data-en="Projects" data-zh="项目">Projects</h2>
+              <p data-i18n data-en="Creating small, useful tools that make research information easier to navigate." data-zh="制作小而实用的工具，让研究信息更容易浏览与使用。">Creating small, useful tools that make research information easier to navigate.</p>
             </article>
           </div>
-          <p class="empty-state" data-search-empty hidden>没有找到匹配内容，请换一个关键词。</p>
         </section>
 
-        <section class="section-block about-grid" id="about">
-          <article data-search-card data-search="关于我 研究兴趣 项目 学习记录">
-            <p class="eyebrow">About</p>
-            <h2>关于我</h2>
-            <p>这个主页正在逐步完善。我关注 AI、机器学习与自然语言处理，也会在这里沉淀项目、论文阅读和会议资料。</p>
-          </article>
-          <article data-search-card data-search="内容原则 官方来源 中文索引 更新">
-            <p class="eyebrow">Editorial Rule</p>
-            <h2>整理原则</h2>
-            <p>时间、地点、投稿节点与论文入口优先引用官方来源；尚未公布的信息会明确标注，不用推测填补空白。</p>
-          </article>
-          <article data-search-card data-search="联系 Email GitHub">
-            <p class="eyebrow">Contact</p>
-            <h2>联系</h2>
-            <p><a href="mailto:2609827233@qq.com">2609827233@qq.com</a><br><a href="https://github.com/ModeLiberaL" target="_blank" rel="noreferrer">github.com/ModeLiberaL</a></p>
-          </article>
+        <section class="section-block" id="interests">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-i18n data-en="Research Interests" data-zh="研究兴趣">Research Interests</p>
+              <h2 data-i18n data-en="Questions I keep returning to" data-zh="反复吸引我的问题">Questions I keep returning to</h2>
+            </div>
+            <p data-i18n data-en="A growing map rather than a fixed list." data-zh="这是一张持续生长的地图，而不是固定不变的清单。">A growing map rather than a fixed list.</p>
+          </div>
+          <div class="interest-grid">
+            <article class="interest-card"><span>01</span><h3 data-i18n data-en="Artificial Intelligence" data-zh="人工智能">Artificial Intelligence</h3><p data-i18n data-en="Reasoning, alignment, and reliable intelligent systems." data-zh="推理、对齐与可靠的智能系统。">Reasoning, alignment, and reliable intelligent systems.</p></article>
+            <article class="interest-card"><span>02</span><h3 data-i18n data-en="Machine Learning" data-zh="机器学习">Machine Learning</h3><p data-i18n data-en="Learning methods, evaluation, and generalization." data-zh="学习方法、评估与泛化。">Learning methods, evaluation, and generalization.</p></article>
+            <article class="interest-card"><span>03</span><h3 data-i18n data-en="Natural Language Processing" data-zh="自然语言处理">Natural Language Processing</h3><p data-i18n data-en="Language models, understanding, and human–AI interaction." data-zh="语言模型、语言理解与人机交互。">Language models, understanding, and human–AI interaction.</p></article>
+            <article class="interest-card"><span>04</span><h3 data-i18n data-en="Research Tools" data-zh="科研工具">Research Tools</h3><p data-i18n data-en="Interfaces that make complex knowledge easier to explore." data-zh="让复杂知识更易探索的交互工具。">Interfaces that make complex knowledge easier to explore.</p></article>
+          </div>
+        </section>
+
+        <section class="section-block contact-panel" id="contact">
+          <div>
+            <p class="eyebrow" data-i18n data-en="Contact" data-zh="联系我">Contact</p>
+            <h2 data-i18n data-en="Let's exchange ideas." data-zh="欢迎交流想法。">Let's exchange ideas.</h2>
+            <p data-i18n data-en="The best way to reach me is by email or GitHub." data-zh="可以通过邮件或 GitHub 联系我。">The best way to reach me is by email or GitHub.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:2609827233@qq.com">2609827233@qq.com</a>
+            <a href="https://github.com/ModeLiberaL" target="_blank" rel="noreferrer">github.com/ModeLiberaL</a>
+          </div>
         </section>
 
         <footer class="site-footer">
-          <span>ModeLiberaL Research Atlas</span>
-          <span>Last updated · 2026-06-26</span>
+          <span>Jinyuan Zhang</span>
+          <span data-i18n data-en="Last updated · 2026-07-01" data-zh="最后更新 · 2026-07-01">Last updated · 2026-07-01</span>
         </footer>
       </main>
     </div>

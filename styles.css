@@ -197,6 +197,35 @@ img {
   font-weight: 500;
 }
 
+.language-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  margin: 13px 0 18px;
+  border: 1px solid #dce4ea;
+  border-radius: 9px;
+  padding: 4px;
+  background: #f5f7f9;
+}
+
+.language-switcher button {
+  min-height: 34px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.language-switcher button.is-active {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: 0 2px 8px rgba(20, 48, 74, 0.09);
+}
+
 .search-box {
   display: flex;
   align-items: center;
@@ -596,6 +625,86 @@ img {
 .about-grid p:last-child {
   margin: 14px 0 0;
   color: var(--muted);
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.interest-card {
+  position: relative;
+  min-height: 190px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  background: var(--paper);
+}
+
+.interest-card > span {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.interest-card h3 {
+  margin: 28px 0 8px;
+  color: var(--navy-deep);
+  font-size: 1.2rem;
+}
+
+.interest-card p,
+.contact-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 40px;
+  align-items: end;
+  margin-top: 72px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 34px;
+  background: var(--navy-deep);
+}
+
+.contact-panel h2 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.contact-panel .eyebrow {
+  color: #9ec7e4;
+}
+
+.contact-panel p {
+  color: #b9c9d5;
+}
+
+.contact-links {
+  display: grid;
+  gap: 8px;
+  justify-items: end;
+}
+
+.contact-links a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.notes-hero h1 span {
+  color: inherit;
 }
 
 .site-footer {
@@ -1150,7 +1259,8 @@ img {
   }
 
   .conference-grid,
-  .about-grid {
+  .about-grid,
+  .interest-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1171,6 +1281,17 @@ img {
   .home-hero {
     grid-template-columns: 1fr;
     padding: 20px;
+  }
+
+  .contact-panel {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 52px;
+    padding: 24px;
+  }
+
+  .contact-links {
+    justify-items: start;
   }
 
   .home-portrait {
