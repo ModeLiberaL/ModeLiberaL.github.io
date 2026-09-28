@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CVPR 2026 中文学习笔记：录用论文、CV×RL 专题、会议回顾、研究方向和官方资源">
+    <meta name="theme-color" content="#173d63">
+    <title>CVPR 2026 学习笔记 · Jinyuan Zhang</title>
+    <link rel="stylesheet" href="styles.css?v=20260701-1">
+    <script src="script.js?v=20260701-1" defer></script>
+  </head>
+  <body data-page="cvpr">
+    <button class="mobile-menu" type="button" aria-controls="sidebar" aria-expanded="false"><span aria-hidden="true">☰</span><span>导航</span></button>
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="CVPR 2026 导航">
+        <div class="sidebar-head">
+          <a class="brand" href="index.html"><img src="assets/profile.jpg" alt=""><span><strong>Jinyuan Zhang</strong><small>Study Notes</small></span></a>
+          <button class="sidebar-close" type="button" aria-label="关闭导航">×</button>
+        </div>
+        <div class="sidebar-title">
+          <p class="kicker">Vision &amp; Pattern Recognition · Denver</p>
+          <h1>CVPR 2026 学习笔记</h1>
+          <p>IEEE/CVF 计算机视觉与模式识别大会：论文入口、CV×RL 专题、研究方向和会后资源。</p>
+        </div>
+        <nav class="guide-switcher" aria-label="页面切换">
+          <a href="index.html"><span>个人主页</span><small>Home</small></a>
+          <a href="notes.html"><span>学习笔记</span><small>Study Notes</small></a>
+          <a href="neurips-2026.html"><span>NeurIPS 2026</span><small>评审中</small></a>
+          <a href="acl-2026.html"><span>ACL 2026</span><small>论文已公开</small></a>
+          <a href="aaai-2026.html"><span>AAAI 2026</span><small>论文已公开</small></a>
+          <a href="icml-2026.html"><span>ICML 2026</span><small>论文已公开</small></a>
+          <a href="iclr-2026.html"><span>ICLR 2026</span><small>会议已结束</small></a>
+          <a class="is-active" href="cvpr-2026.html"><span>CVPR 2026</span><small>会议已结束</small></a>
+        </nav>
+        <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜索 CVPR 导航</span><input type="search" data-guide-search placeholder="搜索论文类型、主题或资源…"></label>
+        <div class="sidebar-stats">
+          <div><strong>4,042</strong><span>主会论文记录</span></div>
+          <div><strong>135</strong><span>CV×RL 专题</span></div>
+        </div>
+        <div class="directory">
+          <p class="directory-label">目录浏览</p>
+          <details open>
+            <summary>会议信息</summary>
+            <a href="#overview">大会速览</a>
+            <a href="#timeline">关键日期</a>
+            <a href="#program">大会回顾</a>
+          </details>
+          <details open>
+            <summary>论文与研究</summary>
+            <a href="#papers">论文入口</a>
+            <a href="#paper-browser">全量论文目录</a>
+            <a href="#topics">主题分类</a>
+          </details>
+          <details open>
+            <summary>继续阅读</summary>
+            <a href="#resources">官方资源</a>
+            <a href="#data-note">数据说明</a>
+          </details>
+        </div>
+        <p class="sidebar-note">数据来源：CVF Open Access 与 CVPR 2026 官网。<br>更新日期：2026-09-28</p>
+      </aside>
+
+      <main class="main" data-search-root>
+        <header class="guide-hero" id="overview" data-search-card data-search="CVPR 2026 Denver 丹佛 科罗拉多 计算机视觉 模式识别">
+          <p class="eyebrow">IEEE/CVF Conference on Computer Vision and Pattern Recognition</p>
+          <h1>CVPR 2026<br>中文学习笔记</h1>
+          <p class="hero-lead">2026 年 6 月 3–7 日，美国丹佛科罗拉多会议中心（Colorado Convention Center）。Workshops 与 Tutorials 于 6 月 3–4 日举行，主会为 6 月 5–7 日。全部主会论文可从 CVF Open Access 浏览，本页额外整理了「计算机视觉 × 强化学习」专题目录。</p>
+          <div class="hero-meta"><span>Denver, Colorado</span><span>2026.06.03–07</span><span>Colorado Convention Center</span></div>
+          <div class="notice">
+            <span aria-hidden="true">✓</span>
+            <div><strong>会后资料持续可用</strong><p>CVF Open Access 论文页、官方虚拟站与技术程序公告均保留在线。本站将它们组织成中文入口，并按关键词筛出 CV×RL 交叉论文，方便跟踪视觉与强化学习结合的工作。</p></div>
+          </div>
+        </header>
+
+        <div class="metrics" aria-label="CVPR 2026 速览">
+          <div class="metric"><strong>16,092</strong><span>投稿（创纪录）</span></div>
+          <div class="metric"><strong>4,089</strong><span>官方录用展示</span></div>
+          <div class="metric"><strong>4,042</strong><span>Open Access 主会记录</span></div>
+          <div class="metric"><strong>135</strong><span>CV×RL 专题论文</span></div>
+        </div>
+
+        <section class="content-section" id="timeline">
+          <p class="eyebrow">Important Dates</p>
+          <h2>关键日期</h2>
+          <p class="section-intro">CVPR 2026 的投稿、评审与大会均已结束，下面保留完整时间线，方便回溯审稿和出版过程。</p>
+          <div class="timeline-grid">
+            <article class="timeline-card is-past" data-search-card data-search="摘要截止 11月7日"><time>2025-11-07</time><h3>摘要提交截止</h3><p>因投稿系统故障曾延长 24 小时。</p></article>
+            <article class="timeline-card is-past" data-search-card data-search="全文截止 11月13日"><time>2025-11-13</time><h3>全文提交截止</h3><p>主论文截止，官方明确不再延期。</p></article>
+            <article class="timeline-card is-past" data-search-card data-search="补充材料 11月20日"><time>2025-11-20</time><h3>补充材料截止</h3><p>Supplementary materials 提交节点。</p></article>
+            <article class="timeline-card is-past" data-search-card data-search="评审开放 1月22日"><time>2026-01-22</time><h3>评审意见开放</h3><p>Reviews released，进入 rebuttal 阶段。</p></article>
+            <article class="timeline-card is-past" data-search-card data-search="rebuttal 1月29日"><time>2026-01-29</time><h3>Rebuttal 结束</h3><p>作者答辩阶段结束。</p></article>
+            <article class="timeline-card is-past" data-search-card data-search="录用通知 2月20日"><time>2026-02-20</time><h3>最终决定</h3><p>主会录用结果发布。</p></article>
+            <article class="timeline-card is-past" data-search-card data-search="workshops tutorials 6月3日 4日"><time>06-03 → 06-04</time><h3>Workshops &amp; Tutorials</h3><p>两天专题研讨会与教程。</p></article>
+            <article class="timeline-card is-past" data-search-card data-search="主会 6月5日 6日 7日"><time>06-05 → 06-07</time><h3>Main Conference</h3><p>Oral、Highlight、Poster、Demo 与社区活动。</p></article>
+            <article class="timeline-card is-next" data-search-card data-search="会后 录像 proceedings"><time>POST-CONF</time><h3>会后资料</h3><p>论文、部分报告录像与奖项信息持续公开。</p></article>
+          </div>
+        </section>
+
+        <section class="content-section" id="papers">
+          <p class="eyebrow">Accepted Papers</p>
+          <h2>论文与展示入口</h2>
+          <p class="section-intro">CVF Open Access 提供全部主会论文的正式出版版本（含 PDF）；官方虚拟站收录报告视频与海报。</p>
+          <div class="paper-grid">
+            <article class="paper-link-card" data-search-card data-search="全部论文 4042 papers openaccess"><span class="paper-count">4,042</span><h3>Open Access 主会论文</h3><p>CVF 官方论文库，按日期浏览全部录用论文与 PDF。</p><a class="card-link" href="https://openaccess.thecvf.com/CVPR2026?day=all" target="_blank" rel="noreferrer">打开 CVF Open Access</a></article>
+            <article class="paper-link-card" data-search-card data-search="CV×RL 强化学习 专题 135"><span class="paper-count">135</span><h3>CV×RL 专题</h3><p>按关键词筛出的「计算机视觉 × 强化学习」交叉论文目录，见下方全量目录。</p><a class="card-link" href="#paper-browser">查看专题目录</a></article>
+            <article class="paper-link-card" data-search-card data-search="虚拟站 virtual 视频 海报"><span class="paper-count">Virtual</span><h3>官方虚拟站</h3><p>报告视频、海报与按主题浏览的展示入口。</p><a class="card-link" href="https://cvpr.thecvf.com/virtual/2026" target="_blank" rel="noreferrer">打开虚拟站</a></article>
+            <article class="paper-link-card" data-search-card data-search="技术程序 投稿 统计 record"><span class="paper-count">16K+</span><h3>技术程序公告</h3><p>官方公布的投稿与录用统计（16,092 投稿、4,089 录用展示）。</p><a class="card-link" href="https://cvpr.thecvf.com/Conferences/2026/News/Technical_Program" target="_blank" rel="noreferrer">阅读公告</a></article>
+            <article class="paper-link-card" data-search-card data-search="闭幕 news awards demo"><span class="paper-count">News</span><h3>大会闭幕公告</h3><p>奖项、Demo 与会后安排的官方总结。</p><a class="card-link" href="https://cvpr.thecvf.com/Conferences/2026/News/Closing" target="_blank" rel="noreferrer">阅读闭幕公告</a></article>
+            <article class="paper-link-card" data-search-card data-search="官网 注册 会议"><span class="paper-count">Home</span><h3>大会主页</h3><p>日程、注册、组织与参会信息总入口。</p><a class="card-link" href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" rel="noreferrer">打开官网</a></article>
+          </div>
+        </section>
+
+        <section class="content-section" id="paper-browser" data-paper-browser data-source="data/cvpr-2026-papers.json?v=20260928-1" data-group-label="全部研究方向" data-type-label="全部类型（可选 CV×RL 专题）">
+          <p class="eyebrow">Full Paper Directory</p>
+          <h2>全量论文目录</h2>
+          <p class="section-intro">收录 CVF Open Access 全部 4,042 篇主会论文，可搜索标题与作者、按研究方向筛选；其中 135 篇「CV×RL 专题」论文在展示类型中单独标记，一键即可筛出视觉与强化学习结合的工作。点击标题直达 CVF 论文页与 PDF。</p>
+          <div class="paper-browser-panel">
+            <div class="catalog-toolbar">
+              <label class="catalog-control">
+                <span>标题 / 作者 / 关键词</span>
+                <input type="search" data-paper-query placeholder="例如：GRPO、reward、diffusion、navigation">
+              </label>
+              <label class="catalog-control">
+                <span>研究方向</span>
+                <select data-paper-group></select>
+              </label>
+              <label class="catalog-control">
+                <span>专题 / 类型</span>
+                <select data-paper-type></select>
+              </label>
+            </div>
+            <div class="catalog-summary">
+              <span data-paper-status>正在加载 CVF 论文数据…</span>
+              <span><strong data-paper-count>—</strong> 篇匹配</span>
+            </div>
+            <div class="catalog-paper-list" data-paper-list></div>
+            <button class="catalog-more" type="button" data-paper-more hidden>继续加载</button>
+          </div>
+        </section>
+
+        <section class="content-section" id="program">
+          <p class="eyebrow">Conference Recap</p>
+          <h2>大会日程回顾</h2>
+          <p class="section-intro">先两天 Workshops 与 Tutorials，随后三天主会，地点均为科罗拉多会议中心。</p>
+          <div class="agenda">
+            <div class="agenda-row" data-search-card data-search="6月3日 workshops tutorials"><time>6 月 3 日</time><strong>Workshops &amp; Tutorials · Day 1</strong><span>专题研讨会与教程</span></div>
+            <div class="agenda-row" data-search-card data-search="6月4日 workshops tutorials"><time>6 月 4 日</time><strong>Workshops &amp; Tutorials · Day 2</strong><span>专题研讨会与教程</span></div>
+            <div class="agenda-row" data-search-card data-search="6月5日 主会 oral poster"><time>6 月 5 日</time><strong>Main Conference · Day 1</strong><span>Oral · Highlight · Poster</span></div>
+            <div class="agenda-row" data-search-card data-search="6月6日 主会 poster demo"><time>6 月 6 日</time><strong>Main Conference · Day 2</strong><span>Oral · Poster · Demo · AI Art Gallery</span></div>
+            <div class="agenda-row" data-search-card data-search="6月7日 主会 awards closing"><time>6 月 7 日</time><strong>Main Conference · Day 3</strong><span>Poster · 闭幕与社区活动</span></div>
+          </div>
+        </section>
+
+        <section class="content-section" id="topics">
+          <p class="eyebrow">Research Map</p>
+          <h2>研究方向 · 热门主题速览</h2>
+          <p class="section-intro">CVPR 没有官方主题字段，以下分组基于论文标题关键词自动归类。首先是本页重点整理的 CV×RL 专题及其子方向，之后是全量论文的粗粒度方向分布。</p>
+          <div class="topic-grid">
+            <article class="topic-card" data-search-card data-search="CV×RL 强化学习 专题 135 GRPO RLHF reward"><span class="topic-number">135</span><h3>CV×RL 专题（标题关键词筛选）</h3><ul><li>RL×生成模型（54）</li><li>视觉对齐与后训练 RL（46）</li><li>具身智能与导航 RL（14）</li><li>视觉推理与 Agent RL（9）、自动驾驶与交通 RL（8）</li><li>感知与低层视觉 RL、RL 方法与安全（4）</li></ul></article>
+            <article class="topic-card" data-search-card data-search="生成 编辑 diffusion 962"><span class="topic-number">962</span><h3>生成与编辑</h3><ul><li>Diffusion 与 Flow Matching</li><li>文本到图像 / 视频生成与编辑</li><li>含 RL×生成模型专题 54 篇</li></ul></article>
+            <article class="topic-card" data-search-card data-search="3D 场景 点云 重建 562"><span class="topic-number">562</span><h3>3D 与场景理解</h3><ul><li>点云、NeRF 与高斯泼溅</li><li>深度估计与 SLAM</li><li>重建与数字化</li></ul></article>
+            <article class="topic-card" data-search-card data-search="多模态 VLM 531"><span class="topic-number">531</span><h3>多模态与 VLM</h3><ul><li>视觉语言模型与对齐</li><li>图文检索与描述</li><li>含对齐后训练 RL 相关工作</li></ul></article>
+            <article class="topic-card" data-search-card data-search="视频 跟踪 367"><span class="topic-number">367</span><h3>视频与跟踪</h3><ul><li>视频理解与时序建模</li><li>目标跟踪与动作识别</li><li>视频生成评测</li></ul></article>
+            <article class="topic-card" data-search-card data-search="检测 分割 212"><span class="topic-number">212</span><h3>检测与分割</h3><ul><li>目标检测与实例分割</li><li>开放词表感知</li><li>细粒度识别</li></ul></article>
+            <article class="topic-card" data-search-card data-search="高效 可信 203"><span class="topic-number">203</span><h3>高效与可信学习</h3><ul><li>压缩、量化与蒸馏</li><li>鲁棒性与对抗</li><li>隐私与公平</li></ul></article>
+            <article class="topic-card" data-search-card data-search="具身 机器人 141"><span class="topic-number">141</span><h3>具身与机器人</h3><ul><li>操作、导航与运动</li><li>Vision-Language-Action</li><li>含具身 RL 专题论文</li></ul></article>
+            <article class="topic-card" data-search-card data-search="医学 科学 88"><span class="topic-number">88</span><h3>医学与科学视觉</h3><ul><li>医学影像分析</li><li>病理与细胞视觉</li><li>遥感等科学应用</li></ul></article>
+            <article class="topic-card" data-search-card data-search="自动驾驶 交通 61"><span class="topic-number">61</span><h3>自动驾驶与交通</h3><ul><li>端到端驾驶</li><li>世界模型与仿真</li><li>含驾驶 RL 专题论文</li></ul></article>
+            <article class="topic-card" data-search-card data-search="其他 视觉 主题 780"><span class="topic-number">780</span><h3>其他视觉主题</h3><ul><li>未被上述关键词覆盖的论文</li><li>底片、成像与渲染</li><li>数据集与评测</li></ul></article>
+          </div>
+          <p class="empty-state" data-search-empty hidden>没有找到匹配的 CVPR 内容。</p>
+        </section>
+
+        <section class="content-section" id="resources">
+          <p class="eyebrow">Official Resources</p>
+          <h2>官方资源</h2>
+          <div class="resource-grid">
+            <article class="resource-card" data-search-card data-search="CVPR 官网"><h3>大会主页</h3><p>日程、注册与组织信息总入口。</p><a class="card-link" href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" rel="noreferrer">打开官网</a></article>
+            <article class="resource-card" data-search-card data-search="CVF Open Access 论文"><h3>CVF Open Access</h3><p>主会论文正式出版版本与 PDF。</p><a class="card-link" href="https://openaccess.thecvf.com/CVPR2026" target="_blank" rel="noreferrer">打开论文库</a></article>
+            <article class="resource-card" data-search-card data-search="虚拟站 视频 海报"><h3>官方虚拟站</h3><p>报告视频、海报与展示入口。</p><a class="card-link" href="https://cvpr.thecvf.com/virtual/2026" target="_blank" rel="noreferrer">打开虚拟站</a></article>
+            <article class="resource-card" data-search-card data-search="关键日期 dates"><h3>关键日期</h3><p>投稿、评审与注册的官方时间线。</p><a class="card-link" href="https://cvpr.thecvf.com/Conferences/2026/Dates" target="_blank" rel="noreferrer">查看日期</a></article>
+            <article class="resource-card" data-search-card data-search="技术程序 统计"><h3>技术程序公告</h3><p>16,092 投稿、4,089 录用展示的官方统计。</p><a class="card-link" href="https://cvpr.thecvf.com/Conferences/2026/News/Technical_Program" target="_blank" rel="noreferrer">阅读公告</a></article>
+            <article class="resource-card" data-search-card data-search="闭幕公告 awards"><h3>闭幕公告</h3><p>奖项与会后安排的官方总结。</p><a class="card-link" href="https://cvpr.thecvf.com/Conferences/2026/News/Closing" target="_blank" rel="noreferrer">阅读公告</a></article>
+          </div>
+        </section>
+
+        <section class="content-section" id="data-note">
+          <div class="notice warning" data-search-card data-search="数据说明 OpenAccess 数量 CV×RL 筛选">
+            <span aria-hidden="true">i</span>
+            <div><strong>论文数量与专题说明</strong><p>官方公布 16,092 篇投稿（较 CVPR 2025 增长约 24%，创纪录）与 4,089 篇录用展示（约 25.4%）；CVF Open Access 主会列表在 2026-09-28 检索到 4,042 条记录，与官方录用数的差异来自个别论文未上传或撤回。CV×RL 专题按标题关键词（reinforcement learning、RLHF、RLVR、GRPO、PPO、DPO、reward、policy optimization 等）筛出 135 篇，子方向基于标题与摘要自动归类，可能存在少量边界误差；全量目录的研究分组亦为关键词自动归类，非官方分类。</p></div>
+          </div>
+        </section>
+        <footer class="site-footer"><span>Jinyuan Zhang · Study Notes</span><span>Official-source summary · 2026-09-28</span></footer>
+      </main>
+    </div>
+    <div class="sidebar-backdrop" hidden></div>
+  </body>
+</html>
